@@ -7,7 +7,8 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    /* Changed the font family to Roboto */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0; /* Similar background color to the previous page */
     color: #333; /* Text color */
@@ -24,62 +25,37 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    /* Changed the font family and size to Roboto Slab */
+    font-family: 'Roboto Slab', serif;
+    font-size: 32px;
     font-weight: bold;
 }
 
 nav ul {
     list-style: none;
 }
-
-.comparison-section {
-    background-color: #ffa500; /* Solid background color for the section */
-    color: #fff; /* Text color */
-    padding: 50px 20px; /* Adjust padding as needed */
-    text-align: center; /* Align text to center */
+nav ul li {
+    display: inline;
+    margin-left: 20px;
 }
 
-.section-content {
-    max-width: 800px; /* Set maximum width for content */
-    margin: 0 auto; /* Center content */
+nav ul li:first-child {
+    margin-left: 0;
 }
 
-h2 {
-    font-size: 2em; /* Heading font size */
-    margin-bottom: 30px; /* Space below heading */
-}
-
-.dropdowns {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px; /* Space between dropdowns and list */
-}
-
-.dropdown {
-    margin: 0 20px; /* Adjust margin between dropdowns */
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-select {
-    width: 200px; /* Adjust dropdown width */
-    padding: 8px;
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
     border-radius: 5px;
-    border: 1px solid #fff; /* Dropdown border */
-    background-color: #fff; /* Dropdown background color */
-    color: #333; /* Dropdown text color */
+    background-color: #ddd;
+    /* Added a transition for the background color */
+    transition: background-color 0.3s ease;
 }
 
-ul.price-list {
-    list-style: none;
-    padding: 0;
-}
-
-.price-list li {
-    margin-bottom: 10px; /* Space between list items */
+nav ul li a:hover {
+    background-color: #aaa;
+    color: #fff;
 }
 
 /* Footer styles */
@@ -90,6 +66,65 @@ footer {
 }
 
 .footer-content {
-    font-size: 14px;
+    /* Changed the font size to 16px */
+    font-size: 16px;
     color: #666;
+}
+
+/* Styles specific to the section */
+section {
+    background-color: #ff8c00; /* Section background color */
+    padding: 20px;
+}
+
+/* Additional styles for form */
+#dataForm,
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dataForm div,
+form div {
+    flex: 1;
+    margin-bottom: 10px; /* Spacing between dropdowns and button */
+}
+
+#dataForm label,
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#dataForm select,
+form select,
+#dataForm input[type="submit"],
+form input[type="submit"] {
+    width: calc(33.33% - 10px); /* Three columns with space in between */
+    padding: 8px;
+    margin-bottom: 10px;
+    /* Added a border and a box shadow for the form elements */
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#dataForm input[type="submit"],
+form input[type="submit"] {
+    width: 100%; /* Full width for the button */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    /* Added a transition and a transform for the button */
+    transition: transform 0.3s ease;
+}
+
+#dataForm input[type="submit"]:hover,
+form input[type="submit"]:hover {
+    background-color: #555;
+    /* Added a scale effect for the button */
+    transform: scale(1.1);
 }
